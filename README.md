@@ -1,4 +1,6 @@
-# virtual reality
+# bitmap.builder
+
+build bmp pictures
 
 
-use the virtual reality keys
+32 x 32 px
