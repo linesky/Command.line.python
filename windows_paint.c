@@ -168,7 +168,7 @@ void LoadBitmaps(HWND hwnd) {
                     BYTE rgb[3];
                     fread(rgb, sizeof(BYTE), 3, file);
                     bitmap[y][x] = RGB(rgb[2], rgb[1], rgb[0]);
-                    hdc = GetDC(hwndCanvas);
+                    //hdc = GetDC(hwndCanvas);
                     brush = CreateSolidBrush( RGB(rgb[2], rgb[1], rgb[0]));
                
                         
