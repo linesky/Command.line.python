@@ -300,8 +300,8 @@ static void on_save_clicked(GtkButton *button, gpointer data) {
             unsigned char bmp_file_header[14] = {'B', 'M'};
             unsigned char bmp_info_header[40] = {0};
             int file_size = 54 + GRID_SIZE * GRID_SIZE * 3;
-            int width = GRID_SIZE * PIXEL_SIZE;
-            int height = GRID_SIZE * PIXEL_SIZE;
+            int width = GRID_SIZE ;
+            int height = GRID_SIZE;
 
             bmp_file_header[2] = (unsigned char)(file_size);
             bmp_file_header[3] = (unsigned char)(file_size >> 8);
@@ -321,6 +321,7 @@ static void on_save_clicked(GtkButton *button, gpointer data) {
             bmp_info_header[11] = (unsigned char)(height >> 24);
             bmp_info_header[12] = 1;
             bmp_info_header[14] = 24;
+
 
             fwrite(bmp_file_header, 1, 14, file);
             fwrite(bmp_info_header, 1, 40, file);
